@@ -46,6 +46,7 @@ const Comment: React.FC<any> = ({ id, by, time, text, kids, parent, depth = 0, f
             className="mt-2 text-gray-800 dark:text-black"
             dangerouslySetInnerHTML={{ __html: text }}
           />
+
           {kids && kids.length > 0 && depth < 5 && (
             <div className="mt-2">
               <button
