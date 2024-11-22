@@ -24,7 +24,12 @@ const Story = ({ story }: StoryProps) => {
       {!story.url && story.text && (
         <div
           className="mt-2 mb-4 text-gray-800 dark:text-gray-200"
-          dangerouslySetInnerHTML={{ __html: story.text }}></div>
+          dangerouslySetInnerHTML={{ __html: story.text }}
+          style={{
+            overflowWrap: "break-word",
+            wordBreak: "break-word",
+            hyphens: "auto",
+          }}></div>
       )}
 
       <p className="text-sm text-gray-600 dark:text-gray-400">

@@ -43,8 +43,13 @@ const Comment: React.FC<any> = ({ id, by, time, text, kids, parent, depth = 0, f
       {isExpanded && (
         <>
           <div
-            className="mt-2 text-gray-800 dark:text-black"
+            className="mt-2 text-gray-800 dark:text-black text-wrap"
             dangerouslySetInnerHTML={{ __html: text }}
+            style={{
+              overflowWrap: "break-word",
+              wordBreak: "break-word",
+              hyphens: "auto",
+            }}
           />
 
           {kids && kids.length > 0 && depth < 5 && (
